@@ -10,7 +10,8 @@ urlpatterns=[
         path('archives/<int:year>/<int:month>/',views.ArchivesView.as_view(),name='archives'),#传递的参数要在url里面
         path('category/<int:category_pk>/',views.CategoryView.as_view(),name='category'),
         path('tag/<int:tag_pk>/',views.TagView.as_view(),name='tags'),
-        path('serch/', views.search, name='search')
+        #path('serch/', views.search, name='search')
+        
         ]
 
 

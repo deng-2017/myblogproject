@@ -110,7 +110,7 @@ class IndexView(ListView):
     model = Post
     template_name = 'blog/index.html'
     context_object_name = 'post_list'
-    paginate_by=1
+    paginate_by=5
     def get_queryset(self):
        #return super().get_queryset().annotate(comment_num=Count('comment'))
        return Post.objects.annotate(comment_num=Count('comment'))####这里要理解下get_queryset是一定会执行的，应该是在as.view()立面
